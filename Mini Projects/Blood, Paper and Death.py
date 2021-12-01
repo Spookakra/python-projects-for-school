@@ -7,6 +7,7 @@
 #(i put 5 because i like that number)
 import random 
 
+
 user_unrealistic_achievements = 0
 computer_rightful_victories = 0
        
