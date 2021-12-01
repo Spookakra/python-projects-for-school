@@ -5,7 +5,7 @@ import socket
 
 
 
-your_location = socket.gethostbyname('wjccschools.instructure.com')
+your_location = socket.gethostbyname('eda.gay')
 
 
 top_of_range = input("Type a number: ")
