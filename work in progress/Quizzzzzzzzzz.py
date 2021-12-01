@@ -53,6 +53,7 @@ while True:
         continue
 #second_half
 #question 3
+#if anyone is smarter than me i am accepting recomendations on how to fix this
 '''
 while True:    
     third_question = input("multiple choice, what is the funniest number", "1: 32", "2: 8", "3: 96", "4: 53") 
