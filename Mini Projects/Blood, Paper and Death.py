@@ -15,7 +15,7 @@ the_opps = ["rock", "paper", "scissors"]#😼
 while True:
     user_input = input("type Rock/Paper/Scissors or 'Q' to quit").lower() 
     if user_input == "q":
-        print("A wise choice, but most cowards were smart"+"-sun man")
+        print("A wise choice, but most cowards were smart.","sun man said that.")
         break
     
     #when the
