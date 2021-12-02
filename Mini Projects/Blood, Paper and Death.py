@@ -67,5 +67,4 @@ else:
 #a dumb cod quote was here so i could use it but i decided against it (very dumb)
 #if you read this can you make a comment in the canvas assignment if you've seen 'arcane' and if so what your opinions on it are
 #reminder to chill on the skin thing and become more original or sum
-#do you use vscode and use 'the doki theme' and dont like the color scheme for astolfo but want to use the wallpaper with matching colors? I would recomend using the 'misato
-# ' color scheme
+#do you use vscode and use 'the doki theme' and dont like the color scheme for astolfo but want to use the wallpaper with matching colors? I would recomend using the 'misato' color scheme
