@@ -7,7 +7,6 @@
 #(i put 5 because i like that number)
 import random 
 
-
 user_unrealistic_achievements = 0
 computer_rightful_victories = 0
        
@@ -16,7 +15,7 @@ the_opps = ["rock", "paper", "scissors"]#😼
 while True:
     user_input = input("type Rock/Paper/Scissors or 'Q' to quit").lower() 
     if user_input == "q":
-        print("A wise choice, but most cowards were smart")
+        print("A wise choice, but most cowards were smart"+"-sun man")
         break
     
     #when the
