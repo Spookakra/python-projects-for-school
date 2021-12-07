@@ -1,7 +1,7 @@
 #Dice Roll Simulator 
 import random
 
-options = ["y", "n"]
+
 first_dice_roll = random.randint(1,6)
 
 while True:
@@ -13,7 +13,7 @@ while True:
     elif mans_question == "n":
         print("ok then")
         quit()
-    if mans_question not in options:
+    else:
         print("that's not an answer")
         continue
 
@@ -25,8 +25,8 @@ while True:
         continue
     elif rollin == "n":
         print(":sadge:")
-        quit()
-    if rollin not in options:
+        break
+    else:
         print("that's not an answer")
         continue
 
