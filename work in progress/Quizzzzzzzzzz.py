@@ -4,6 +4,8 @@
 #Its best to minamize the loops idk if you can do that if you're using triket though (https://i.postimg.cc/ZR2wWBgR/likethis.png)
 #this code is a WIP
 
+import time
+
 #corrrect choises 😩 (will probably remain at 0) 
 tributes_to_the_almighty_linechu = 0
 #truitious or fictitious
@@ -117,14 +119,15 @@ print("Your final score is", tributes_to_the_almighty_linechu)
 if tributes_to_the_almighty_linechu < 0:
     print("I really hope you were trying to fail")
     print("How you get a negative score otherwise?")
+    time.sleep(3)
     quit()
 
 else:
     print("Congrats you beat the bear minimum")
     print("At least you're not a League player")
     print("(hopefully)")
+    time.sleep(3)
     quit()
-
 
 
 

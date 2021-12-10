@@ -6,6 +6,7 @@
 #WAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUPWAKEUP
 #(i put 5 because i like that number)
 import random 
+import time
 
 user_unrealistic_achievements = 0
 computer_rightful_victories = 0
@@ -56,10 +57,14 @@ if computer_rightful_victories > user_unrealistic_achievements:
     print("The machine has won the match")
     print("but you should have expected that")
     print("You will never see your skin, wife, kids or the light of day ever again")
+    time.sleep(3)
+    quit
 else:
     print("You won the match")
-    print("BUT, it's bitter sweet cause you didn't win the court case")
-
+    print("BUT, it's bitter sweet cause you didn't win the court case") 
+    time.sleep(3)
+    quit
+ 
 
 
 
