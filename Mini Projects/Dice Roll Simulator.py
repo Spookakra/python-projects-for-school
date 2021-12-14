@@ -1,5 +1,6 @@
 #Dice Roll Simulator 
 import random
+import time
 
 
 first_dice_roll = random.randint(1,6)
@@ -29,5 +30,8 @@ while True:
     else:
         print("that's not an answer")
         continue
+
+time.sleep(3)
+quit
 
     

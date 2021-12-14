@@ -2,6 +2,7 @@
 
 import random
 import socket
+import time
 
 
 
@@ -50,6 +51,8 @@ while True:
 
 print("It really took you", guesses, "tries?")
 print("blocked")
+time.sleep(3)
+quit
 
 
 #nvm, not sorry

@@ -1,5 +1,6 @@
 #text based adventure game (comming soon)
 import random
+import time
 
 fightingchance = random.randint(1,6)
 
@@ -51,3 +52,5 @@ else:
     print('ITS ABOUT LIES 🤞 ITS ABOUT VENTING 🕳 WE STAY SUSSY 😈 WE IMPOSTOR 📮 KILL IN O2 💨 KILL IN REACTOR 🔋 AND SABOTAGE 💥 I GOT IMPOSTOR IN MY VEINS 🫀 I NEED TO KILL THE CREWMATES 🔪 I WON THE GAME 🏆 SO WHATS MY MOTHERSUSSING NAME? 🗣 BAKA 😈📮')
 
 print("Thank you for trying", player_name, "now get out")
+time.sleep(3)
+quit
