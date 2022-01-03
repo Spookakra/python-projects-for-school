@@ -1,19 +1,17 @@
 
-
-
 def add():
     name = input('Name: ')
     number = input("Number: ")
 
-    with open('work in progress\contacts.txt', 'a') as f:
-        f.write(name + "|" + "\n")
+    with open('work in progress\contact book\contacts.txt', 'a') as f:
+        f.write(name + "|" + number + "\n")
 
 def view():
-    with open('contacts.txt', 'r') as f:
+    with open('work in progress\contact book\contacts.txt', 'r') as f:
         for line in f.readlines():
             data = line.rstrip()
             name, number = data.split("|")
-            print("Name:", name, "| number:", number)
+            print("Name:", name, "| Number:", number)
 
 
 

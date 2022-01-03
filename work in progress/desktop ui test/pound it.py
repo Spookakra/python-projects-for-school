@@ -19,8 +19,4 @@ grindsetman.bind("<Button-1>",grindsetevent)
 
 
 
-
-
-
-
 window.mainloop()

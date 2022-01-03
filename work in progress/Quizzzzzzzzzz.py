@@ -23,7 +23,7 @@ while True:
 #first half 
 #question 1 
 while True: 
-    first_question = input("true or false, League is a good and fun game") 
+    first_question = input("'true' or 'false', League is a good and fun game") 
     if first_question == "false":
         print("you got it right")
         tributes_to_the_almighty_linechu += 1
@@ -39,7 +39,7 @@ while True:
         continue
 #question 2
 while True: 
-    second_question = input("true or false, I am on the run from the police") 
+    second_question = input("'true' or 'false', I am on the run from the police") 
     if second_question == "true":
         print("FOR SHAME THAT YOU THINK OF ME THAT WAY")
         tributes_to_the_almighty_linechu -= 1
@@ -55,8 +55,7 @@ while True:
         continue
 #second_half
 #question 3
-#if anyone is smarter than me i am accepting recomendations on how to fix this
-'''
+
 while True:    
     third_question = input("multiple choice, what is the funniest number", "1: 32", "2: 8", "3: 96", "4: 53") 
     if third_question == "1":
@@ -79,10 +78,11 @@ while True:
         tributes_to_the_almighty_linechu += 1
         break 
 
-    if third_question not in imgettingreallytires:
+    else:
         print("Thats not even and option")
         print("Its only 4 options try harder")
         continue
+
 #question 4
 while True:    
     fourth_question = input("multiple How many elements are there on the periodic table?", "1: 112", "2: 120", "3: 118", "4: 153") 
@@ -106,11 +106,11 @@ while True:
         tributes_to_the_almighty_linechu -= 1
         break 
 
-    if fourth_question not in imgettingreallytires:
+    else:
         print("Thats not even and option")
         print("Its only 4 options try harder")
         continue
-'''  
+
         
         
 print("Your final score is", tributes_to_the_almighty_linechu)

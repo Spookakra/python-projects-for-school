@@ -10,7 +10,7 @@ def write_key():
 
 #loads the key file
 def load_key():
-    file = open("key.key", "rb")
+    file = open("Mini Projects\Password manager\key.key", "rb")
     key = file.read()
     file.close()
     return key
@@ -24,7 +24,7 @@ fer = Fernet(key)
 
 #view existing passwords
 def view():
-    with open('passwords.txt', 'r') as f:
+    with open('Mini Projects\Password manager\passwords.txt', 'r') as f:
         for line in f.readlines():
             data = line.rstrip()
             user, passw = data.split("|")
@@ -38,7 +38,7 @@ def add():
     name = input('Account Name: ')
     pwd = input("Password: ")
 
-    with open('passwords.txt', 'a') as f:
+    with open('Mini Projects\Password manager\passwords.txt', 'a') as f:
         f.write(name + "|" + fer.encrypt(pwd.encode()).decode() + "\n")
 
 
