@@ -50,8 +50,9 @@ while True:
 
 
 print("It really took you", guesses, "tries?")
-print("blocked")
 time.sleep(3)
+print("blocked")
+time.sleep(1)
 quit
 
 
