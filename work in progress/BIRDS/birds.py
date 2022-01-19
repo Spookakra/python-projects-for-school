@@ -6,9 +6,9 @@ import time
 bird.speed(0)
 
 
-
+bird.shape("triangle")
 
                                                                          
 while True: 
-    bird.goto(random.randint(1, 400), random.randint(1, 400))
-    time.sleep(5)
+    bird.goto(random.randint(-400, 400), random.randint(-400, 400))
+    time.sleep(0.5)
