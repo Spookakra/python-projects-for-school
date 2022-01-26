@@ -15,8 +15,8 @@ def grindsetevent(event):
 #simple 1999 button
 grindsetman = tk.Button(window, text = "click me")
 grindsetman.grid(column=8, row=5)
-grindsetman.bind("<Button-1>",grindsetevent)
+grindsetman.bind('<Button-1>' ,grindsetevent)
 
-
+#i am stuck in a perpetual loop of pain
 
 window.mainloop()
