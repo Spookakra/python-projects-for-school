@@ -34,11 +34,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/textalog/nodes/dialogue_base_node/options_node/options_node.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://main/The Dumpster.gd"
-}, {
 "base": "Resource",
 "class": "Portrait",
 "language": "GDScript",
@@ -50,7 +45,7 @@ _global_script_classes=[ {
 "path": "res://addons/textalog/nodes/dialogue_base_node/portraits_node/portraits_node.gd"
 }, {
 "base": "KinematicBody2D",
-"class": "smirk_emoji",
+"class": "player",
 "language": "GDScript",
 "path": "res://main/Player.gd"
 } ]
@@ -60,16 +55,19 @@ _global_script_class_icons={
 "DialogManager": "",
 "DialogNode": "",
 "OptionsManager": "",
-"Player": "",
 "Portrait": "res://addons/textalog/assets/icons/portrait_icon.png",
 "PortraitManager": "",
-"smirk_emoji": ""
+"player": ""
 }
 
 [application]
 
 config/name="Graveyard Shift"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/fullscreen=true
 
 [editor_plugins]
 
@@ -100,6 +98,12 @@ right={
 dash={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+shoot={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

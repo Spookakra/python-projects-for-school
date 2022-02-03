@@ -1,25 +1,34 @@
 extends KinematicBody2D
 
-class_name smirk_emoji
+class_name player
 
+#they dont change
 var speed = 50
 var jump_power = 800
 var stopping_friction = 0.6
 var running_friction = 0.9
 var gravity = 35
 
-var vel = Vector2()
-
+#things that do change (sorrta)
+var ammo = 30 
 var jumps_left = 2
 var dash_direction = Vector2(1,0)
 var can_dash = false
 var dashing = false
 
+#misc
+var vel = Vector2()
+
+#preloads the bullet
+const BULLET = preload("res://main/Bullet.tscn")
 
 
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
+
+
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -32,15 +41,33 @@ func _physics_process(delta):
 	friction()
 	gravity()
 	vel = move_and_slide(vel, Vector2.UP)
+	
+#shooting
+	if Input.is_action_just_pressed("shoot") and ammo > 0:
+		var bullet = BULLET.instance()
+		if sign($Position2D.position.x) == 1:
+			bullet.set_bullet_direction(1)
+		else:
+			bullet.set_bullet_direction(-1)
+		get_parent().add_child(bullet)
+		bullet.position = $Position2D.global_position
+
 
 
 func run(delta):
 	if Input.is_action_pressed("right"):
 		vel.x += speed
 		$Sprite.flip_h = false
+		if sign ($Position2D.position.x) == -1:
+			$Position2D.position.x *= -1
 	if Input.is_action_pressed("left"):
 		vel.x -= speed
 		$Sprite.flip_h = true
+		if sign ($Position2D.position.x) == 1:
+			$Position2D.position.x *= -1
+	if Input.is_action_just_pressed("shoot"):
+		ammo -= 1
+		print(ammo)
 
 
 
@@ -98,6 +125,7 @@ func dash():
 		yield(get_tree().create_timer(0.2), "timeout")
 		dashing = false
 
+
 func next_to_wall():
 	return next_to_left_wall() or next_to_right_wall()
 	
@@ -109,7 +137,7 @@ func next_to_right_wall():
 
 
 func take_damage():
-	get_tree().change_scene("res://main.tscn")
+	get_tree().change_scene("res://main/no.tscn")
 
 #i forgor
 #most of this is someone elses code
