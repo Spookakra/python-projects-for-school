@@ -4,17 +4,18 @@ class_name player
 
 #they dont change
 var speed = 50
-var jump_power = 800
+var jump_power = 900
 var stopping_friction = 0.6
 var running_friction = 0.9
-var gravity = 35
-
+var gravity = 45
 #things that do change (sorrta)
 var ammo = 30 
 var jumps_left = 2
 var dash_direction = Vector2(1,0)
 var can_dash = false
 var dashing = false
+var health = 3
+var can_shoot = true
 
 #misc
 var vel = Vector2()
@@ -26,13 +27,8 @@ const BULLET = preload("res://main/Bullet.tscn")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 	
-
-
-
-func _input(event):
-	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
 	run(delta)
@@ -43,7 +39,7 @@ func _physics_process(delta):
 	vel = move_and_slide(vel, Vector2.UP)
 	
 #shooting
-	if Input.is_action_just_pressed("shoot") and ammo > 0:
+	if Input.is_action_just_pressed("shoot") and can_shoot and ammo > 0:
 		var bullet = BULLET.instance()
 		if sign($Position2D.position.x) == 1:
 			bullet.set_bullet_direction(1)
@@ -54,7 +50,12 @@ func _physics_process(delta):
 
 
 
+
+
+
 func run(delta):
+	#print(health)
+	#print(ammo)
 	if Input.is_action_pressed("right"):
 		vel.x += speed
 		$Sprite.flip_h = false
@@ -67,7 +68,8 @@ func run(delta):
 			$Position2D.position.x *= -1
 	if Input.is_action_just_pressed("shoot"):
 		ammo -= 1
-		print(ammo)
+		
+
 
 
 
@@ -137,7 +139,9 @@ func next_to_right_wall():
 
 
 func take_damage():
-	get_tree().change_scene("res://main/no.tscn")
+	get_tree().change_scene("res://main.tscn")
+	health =- 1
+
 
 #i forgor
 #most of this is someone elses code
@@ -146,4 +150,6 @@ func take_damage():
 
 
 func _on_VisibilityNotifier2D_screen_exited():
+	health =- 1
 	take_damage()
+

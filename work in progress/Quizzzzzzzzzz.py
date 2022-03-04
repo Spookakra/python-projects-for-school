@@ -55,6 +55,7 @@ while True:
         continue
 #second_half
 #question 3
+'''
 
 while True:    
     third_question = input("multiple choice, what is the funniest number", "1: 32", "2: 8", "3: 96", "4: 53") 
@@ -87,7 +88,7 @@ while True:
 while True:    
     fourth_question = input("multiple How many elements are there on the periodic table?", "1: 112", "2: 120", "3: 118", "4: 153") 
     if fourth_question == "1":
-        print("you've already been blocked by eden and your ip has been banned for his website")
+        print("you've already been blocked by eden and your ip has been banned from his website")
         tributes_to_the_almighty_linechu -= 1
         break
 
@@ -111,7 +112,7 @@ while True:
         print("Its only 4 options try harder")
         continue
 
-        
+'''
         
 print("Your final score is", tributes_to_the_almighty_linechu)
 
