@@ -30,8 +30,8 @@ while True:
         continue
 
 #all i need is ctrl c and ctrl v
-#python file opening modes ig 
-#w is "write" create or orveride a file
-#r "read mode" reads a file 
-#a "apend mode" allows you to add to the end of a file or create a new file if it does not exist if it does you can write and read it
-#rb "read/bites mode" read bits or sum idk thats what the guy said
+#python file opening modes ig:
+    #w is "write" create or orveride a file
+    #r "read mode" reads a file 
+    #a "apend mode" allows you to add to the end of a file or create a new file if it does not exist if it does you can write and read it
+    #rb "read/bites mode" read bits or sum idk thats what the guy said

@@ -1,5 +1,6 @@
 import turtle
 import time
+from PIL import Image
 
 
 wn = turtle.Screen()
