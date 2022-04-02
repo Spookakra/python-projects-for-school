@@ -1,20 +1,15 @@
-import turtle
-import time
-from PIL import Image
+#tax sim
+
+me = input("what is your name? ").lower()
+if me == "ryan":
+    quit
+elif me == "noah":
+    quit
+else:
+    pass
+
+print("hello", me, "it is time to pay taxes.")
 
 
-wn = turtle.Screen()
-wn.title("disney level animation")
-wn.bgcolor("White")
 
 
-bg_image = "homework\yeah.gif"
-wn.addshape(bg_image)
-
-def turtle_animate():
-    turtle.shape("bg_image")
-
-
-turtle_animate()
-
-wn.mainloop()

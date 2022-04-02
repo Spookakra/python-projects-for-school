@@ -1,10 +1,27 @@
 # catch a turtle.py
 #-----import statements-----
-import turtle
+import turtle 
+import os
 import random as rand
 import LeaderBoared as lb
+import time
+
+#-----name input-----
+os.system('cls||clear')
+
+while True:
+  player_name = input("What are your initials? ").upper()
+  if len(player_name) > 3:
+    print("3 Chracters max")
+    time.sleep(2)
+    os.system('cls||clear')
+    continue
+  else:
+    break
+
 #-----game configuration----
 wn = turtle.Screen()
+
 
 score_writer = turtle.Turtle()
 score_final = turtle.Turtle()
@@ -17,8 +34,6 @@ nm835_shape = "triangle"
 score = 0
 
 leaderboard_filename = "LeaderBoared.txt"
-player_name = input("What is you're name?")
-
 
 #-----initialize turtle-----
 wn.screensize(400, 500)

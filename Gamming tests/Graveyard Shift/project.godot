@@ -54,11 +54,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogue_nodes/objects/bbcodeWait.gd"
 }, {
-"base": "Camera2D",
-"class": "ShakeCamera2D",
-"language": "GDScript",
-"path": "res://main/ShakeCamera2D.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "player",
 "language": "GDScript",
@@ -74,7 +69,6 @@ _global_script_class_icons={
 "Portrait": "res://addons/textalog/assets/icons/portrait_icon.png",
 "PortraitManager": "",
 "RichTextWait": "",
-"ShakeCamera2D": "",
 "player": ""
 }
 
@@ -86,6 +80,30 @@ config/icon="res://ground.png"
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/acro_hitboxes/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/fun_coding/plugin.cfg", "res://addons/saveNode/plugin.cfg", "res://addons/textalog/plugin.cfg" )
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
 
 [input]
 

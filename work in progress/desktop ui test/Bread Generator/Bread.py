@@ -1,5 +1,11 @@
 # hello_world.py
 
-import PySimpleGUI as sg
+import PySimpleGUIQt as sg
+import time
 
-sg.Window(title="Bread Generator", layout=[[]], margins=(200, 200), icon=r"Breadtag.ico").read()
+
+
+window = sg.Window(title="Bread Generator", layout=[[]], margins=(200, 200), icon="work in progress\desktop ui test\Bread Generator\Breadtag.ico").read()
+
+
+sg.close()
