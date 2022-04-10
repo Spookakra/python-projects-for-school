@@ -3,7 +3,7 @@
 import turtle 
 import os
 import random as rand
-import LeaderBoared as lb
+import leaderboard as lb
 import time
 
 #-----name input-----
@@ -33,7 +33,7 @@ nm835_size = 2
 nm835_shape = "triangle"
 score = 0
 
-leaderboard_filename = "LeaderBoared.txt"
+leaderboard_filename = "homework\Pirated and illigal video games\leaderboard.txt"
 
 #-----initialize turtle-----
 wn.screensize(400, 500)
@@ -52,7 +52,7 @@ score_final.goto(-55, 50)
 
 #-----countdown variables-----
 font_setup = ("Impact", 20, "normal")
-timer = 30
+timer = 5
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 
@@ -67,7 +67,7 @@ counter.goto(230, 257)
 def manage_leaderboard():
 
   global score
-  global spot
+  global noobmaster835
 
   # get the names and scores from the leaderboard file
   leader_names_list = lb.get_names(leaderboard_filename)
@@ -76,21 +76,22 @@ def manage_leaderboard():
   # show the leaderboard with or without the current player
   if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
     lb.update_leaderboard(leaderboard_filename, leader_names_list, leader_scores_list, player_name, score)
-    lb.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
+    lb.draw_leaderboard(True, leader_names_list, leader_scores_list, noobmaster835, score)
 
   else:
-    lb.draw_leaderboard(False, leader_names_list, leader_scores_list, spot, score)
+    lb.draw_leaderboard(False, leader_names_list, leader_scores_list, noobmaster835, score)
 
 def countdown():
   global timer, timer_up, score
   counter.clear()
   if timer <= 0:
+    manage_leaderboard()
     counter.clear()
     counter.goto(-50, 80)
     counter.write("Time's Up", font=font_setup)
     score_final.write("Your final score was: " +  str(score))
     timer_up = True
-    manage_leaderboard()
+
 
   else:
     counter.write("Timer: " + str(timer), font=font_setup)
