@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main/Character Controller/ScreenShake.tscn" type="PackedScene" id=1]
+
+[node name="MainCamera" type="Camera2D"]
+position = Vector2( 507, 324 )
+current = true
+limit_left = -100
+limit_top = -100
+limit_right = 5000
+limit_bottom = 616
+limit_smoothed = true
+smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="ScreenShake" parent="." instance=ExtResource( 1 )]

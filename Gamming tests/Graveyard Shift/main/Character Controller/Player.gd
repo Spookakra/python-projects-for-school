@@ -21,7 +21,7 @@ var can_shoot = true
 var vel = Vector2()
 
 #preloads the bullet
-const BULLET = preload("res://main/Bullet.tscn")
+const BULLET = preload("res://main/Character Controller/bullet.gd")
 
 
 
