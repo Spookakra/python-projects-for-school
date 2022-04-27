@@ -77,10 +77,6 @@ _global_script_class_icons={
 config/name="Graveyard Shift"
 config/icon="res://ground.png"
 
-[editor_plugins]
-
-enabled=PoolStringArray( "res://addons/acro_hitboxes/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg", "res://addons/fun_coding/plugin.cfg", "res://addons/saveNode/plugin.cfg" )
-
 [importer_defaults]
 
 texture={

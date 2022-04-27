@@ -21,7 +21,7 @@ var can_shoot = true
 var vel = Vector2()
 
 #preloads the bullet
-const BULLET = preload("res://main/Character Controller/bullet.gd")
+const BULLET = preload("res://main/Character Controller/Bullet.tscn")
 
 
 
@@ -39,14 +39,8 @@ func _physics_process(delta):
 	vel = move_and_slide(vel, Vector2.UP)
 	
 #shooting
-	if Input.is_action_just_pressed("shoot") and can_shoot and ammo > 0:
-		var bullet = BULLET.instance()
-		if sign($Position2D.position.x) == 1:
-			bullet.set_bullet_direction(1)
-		else:
-			bullet.set_bullet_direction(-1)
-		get_parent().add_child(bullet)
-		bullet.position = $Position2D.global_position
+	if Input.is_action_just_pressed("shoot") and ammo > 0:
+		shoot()
 
 
 
@@ -141,11 +135,18 @@ func next_to_right_wall():
 func take_damage():
 	get_tree().change_scene("res://main.tscn")
 	health =- 1
-
-
-#i forgor
-#most of this is someone elses code
-#dont know who though
+	
+	
+	
+func shoot():
+		var bullet = BULLET.instance()
+		if sign($Position2D.position.x) == 1:
+			bullet.set_bullet_direction(1)
+		else:
+			bullet.set_bullet_direction(-1)
+		get_parent().add_child(bullet)
+		bullet.position = $Position2D.global_position
+		
 
 
 
@@ -153,3 +154,263 @@ func _on_VisibilityNotifier2D_screen_exited():
 	health =- 1
 	take_damage()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#most of this is someone elses code
+#dont know who though

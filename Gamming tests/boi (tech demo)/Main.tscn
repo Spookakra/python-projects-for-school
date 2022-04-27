@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Issacwhy.tscn" type="PackedScene" id=1]
+
+[node name="Main" type="Node2D"]
+
+[node name="Issacwhy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 608, 627 )
+
+[node name="Camera2D" type="Camera2D" parent="Issacwhy"]
+position = Vector2( -1, 0 )
+current = true
+limit_left = -100
+limit_top = -100
+limit_right = 1500
+limit_bottom = 1200
+limit_smoothed = true
+editor_draw_limits = true

@@ -45,4 +45,8 @@ cast_to = Vector2( 0, 40 )
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 42, 0 )
 
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
