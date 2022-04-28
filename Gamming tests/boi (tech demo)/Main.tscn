@@ -5,14 +5,20 @@
 [node name="Main" type="Node2D"]
 
 [node name="Issacwhy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 608, 627 )
+position = Vector2( 735, 427 )
 
 [node name="Camera2D" type="Camera2D" parent="Issacwhy"]
 position = Vector2( -1, 0 )
 current = true
+zoom = Vector2( 1.563, 2 )
 limit_left = -100
 limit_top = -100
 limit_right = 1500
 limit_bottom = 1200
 limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 2.0
 editor_draw_limits = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
