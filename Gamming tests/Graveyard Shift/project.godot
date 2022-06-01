@@ -75,7 +75,19 @@ _global_script_class_icons={
 [application]
 
 config/name="Graveyard Shift"
+config/description="Just like 1984"
+run/main_scene="res://main.tscn"
 config/icon="res://ground.png"
+config/windows_native_icon="res://ground.ico"
+
+[autoload]
+
+SaveFile="*res://save_file.gd"
+
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
 
 [importer_defaults]
 

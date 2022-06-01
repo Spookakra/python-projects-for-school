@@ -34,10 +34,6 @@ func shoot():
 			get_parent().add_child(bullet)
 			bullet.position = $Position2D.global_position
 
-
-		
-
-
 func friction():
 	# When I hold the key
 	var running = Input.is_action_pressed("left") or Input.is_action_pressed("right") or Input.is_action_pressed("up") or Input.is_action_pressed("down")

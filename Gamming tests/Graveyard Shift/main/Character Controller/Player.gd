@@ -9,7 +9,7 @@ var stopping_friction = 0.6
 var running_friction = 0.9
 var gravity = 45
 #things that do change (sorrta)
-var ammo = 30 
+var ammo = 30
 var jumps_left = 2
 var dash_direction = Vector2(1,0)
 var can_dash = false
@@ -22,11 +22,14 @@ var vel = Vector2()
 
 #preloads the bullet
 const BULLET = preload("res://main/Character Controller/Bullet.tscn")
+onready var game_data = SaveFile.game_data
 
 
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
 
 	
 
@@ -38,10 +41,9 @@ func _physics_process(delta):
 	gravity()
 	vel = move_and_slide(vel, Vector2.UP)
 	
-#shooting
-	if Input.is_action_just_pressed("shoot") and ammo > 0:
+	#shooting
+	if Input.is_action_just_pressed("shoot") and game_data.ammo > 0:
 		shoot()
-
 
 
 
@@ -49,7 +51,7 @@ func _physics_process(delta):
 
 func run(delta):
 	#print(health)
-	#print(ammo)
+	#print(game_data.ammo)
 	if Input.is_action_pressed("right"):
 		vel.x += speed
 		$Sprite.flip_h = false
@@ -62,6 +64,8 @@ func run(delta):
 			$Position2D.position.x *= -1
 	if Input.is_action_just_pressed("shoot"):
 		ammo -= 1
+		game_data.ammo -= 1
+		SaveFile.save_data()
 		
 
 
@@ -153,8 +157,6 @@ func shoot():
 func _on_VisibilityNotifier2D_screen_exited():
 	health =- 1
 	take_damage()
-
-
 
 
 
