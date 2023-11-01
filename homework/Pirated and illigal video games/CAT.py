@@ -35,6 +35,9 @@ score = 0
 
 leaderboard_filename = "homework\Pirated and illigal video games\leaderboard.txt"
 
+leader_names_list = []
+leader_scores_list = []
+
 #-----initialize turtle-----
 wn.screensize(400, 500)
 noobmaster835 = turtle.Turtle()
@@ -52,7 +55,7 @@ score_final.goto(-55, 50)
 
 #-----countdown variables-----
 font_setup = ("Impact", 20, "normal")
-timer = 5
+timer = 30
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 
@@ -66,6 +69,8 @@ counter.goto(230, 257)
 
 def manage_leaderboard():
 
+  global leader_scores_list
+  global leader_names_list
   global score
   global noobmaster835
 
@@ -82,6 +87,7 @@ def manage_leaderboard():
     lb.draw_leaderboard(False, leader_names_list, leader_scores_list, noobmaster835, score)
 
 def countdown():
+
   global timer, timer_up, score
   counter.clear()
   if timer <= 0:
