@@ -33,6 +33,7 @@ while val < 22:
     if val == 21:
         break
     elif input(): 
+        pass
 
 
 
